@@ -2,25 +2,47 @@ package aparcamientos;
 
 public class Aparcamiento {
 
-    private String ciudad;
-    private String nombre;
-    private int capacidadMaxima;
-    private int cochesAparcados;
+	private String name;
 
-    public Aparcamiento(String ciudad, String nombre, int capacidadMaxima) {
-    }
+	private int capacity;
 
-    public synchronized void entrarCoche() {
-    }
+	private int cars;
 
-    public synchronized void salirCoche() {
-    }
+	public int getCapacity() {
+		return capacity;
+	}
 
-    public synchronized int getCochesAparcados() {
-		return capacidadMaxima;
-    }
+	public int getCars() {
+		return cars;
+	}
 
-    public String getCiudad() {
-		return ciudad;
-    }
+	public void setCars(int cars) {
+		this.cars = cars;
+	}
+
+	public void parking(String name, int capacity) {
+		this.name = name;
+		this.capacity = capacity;
+		this.cars = cars;
+
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+	
+	public void increment() {
+		cars++;
+	}
+	
+	public void decrease() {
+		cars--;
+	}
+	
+
 }
+
